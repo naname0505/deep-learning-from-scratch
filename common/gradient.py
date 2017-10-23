@@ -25,7 +25,7 @@ def numerical_gradient_2d(f, X):
     else:
         grad = np.zeros_like(X)
         
-        for idx, x in enumerate(X):
+        for idx, x in enumerate(X): # loopの際にインデックス付きで要素を得る / https://python.civic-apps.com/zip-enumerate/
             grad[idx] = _numerical_gradient_1d(f, x)
         
         return grad
